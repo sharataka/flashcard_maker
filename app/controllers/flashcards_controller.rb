@@ -26,10 +26,10 @@ class FlashcardsController < ApplicationController
 
 	def update
 		if @flashcard.update_attributes(params[:flashcard])
-			flash[:notice] = "flashcard has been updated."
+			flash[:notice] = "Flashcard has been updated."
 			redirect_to "/decks/#{@deck.id}"
 		else
-			flash[:alert] = "flashcard has not been updated."
+			flash[:alert] = "Flashcard has not been updated."
 			render :action => "edit"
 		end
 	end
