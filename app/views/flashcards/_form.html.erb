@@ -1,0 +1,15 @@
+<%= form_for [@deck, @flashcard] do |f| %> 
+
+
+  <p>
+    <%= f.label :front %><br>
+    <%= f.text_area :front, :class => "form-control", :rows => "3" %>
+</p> <p>
+    <%= f.label :back %><br>
+    <%= f.text_area :back, :class => "form-control", :rows => "3" %>
+  </p>
+  <%= f.submit "Continue", :class => "btn btn-large btn-success" %>
+	
+	<br/><br/>
+	<%= link_to "Go back to deck", @deck, :class => "btn btn-large btn-primary"%>
+<% end %>
