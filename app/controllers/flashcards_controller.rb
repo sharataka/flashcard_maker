@@ -10,7 +10,7 @@ class FlashcardsController < ApplicationController
 	def create
 		@flashcard = @deck.flashcards.build(params[:flashcard])
 		if @flashcard.save
-			flash[:notice] = "Flashcard has been created."
+			flash[:notice] = "'#{@flashcard.front}' has been saved."
 			redirect_to "/decks/#{@deck.id}/flashcards/new"
 		else
 			flash[:alert] = "Flashcard has not been created."
@@ -26,7 +26,7 @@ class FlashcardsController < ApplicationController
 
 	def update
 		if @flashcard.update_attributes(params[:flashcard])
-			flash[:notice] = "Flashcard has been updated."
+			flash[:notice] = "'#{@flashcard.front}' has been updated."
 			redirect_to "/decks/#{@deck.id}"
 		else
 			flash[:alert] = "Flashcard has not been updated."
