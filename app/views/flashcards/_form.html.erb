@@ -9,7 +9,9 @@
     <%= f.text_area :back, :class => "form-control", :rows => "3" %>
   </p>
   <%= f.submit "Save", :class => "btn btn-large btn-success" %>
-	
-	<br/><br/>
 	<%= link_to "Cancel", @deck, :class => "btn btn-large btn-primary"%>
+
+  <br/><br/>
+
+  <%= link_to "Back to deck", @deck %>
 <% end %>
