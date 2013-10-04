@@ -8,10 +8,11 @@
 
           <center>
             <h1><%= pluralize(@decks.count, 'deck') %></h1>
-              
+          
 				  <% @decks.each do |deck| %>
 
         <div class="panel panel-info">          
+            
             <div class="panel-heading">
               <h3 class="panel-title"><%= link_to "Go to '#{deck.name}'", deck %>  </h3>
              
@@ -19,17 +20,20 @@
 
             <div class="panel-body">
               <%= deck.flashcards.count %> words
-
             </div>
-            <center><%= link_to "Edit", edit_deck_path(deck) %>
+         
+            
+            <%= link_to "Edit", edit_deck_path(deck) %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <%= link_to "Delete", deck, :method => :delete,
-       :confirm => "Are you sure you want to delete this deck?" %></center>
+       :confirm => "Are you sure you want to delete this deck?" %>
+     
           </div>
 
 
 
 				  <% end %>
           </center>
+         
         </div>
       </div>
 
