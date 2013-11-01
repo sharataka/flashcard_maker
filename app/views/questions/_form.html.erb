@@ -1,0 +1,29 @@
+<%= form_for(@question) do |f| %> 
+	
+	Question
+	<%= f.text_field :questions, :class => "form-control" %>
+	<br>
+
+	Correct Answer
+	<%= f.text_field :correctAnswer, :class => "form-control" %>
+	<br>
+
+	Incorrect 1
+	<%= f.text_field :incorrect1, :class => "form-control" %>
+	<br>
+
+	Incorrect 2
+	<%= f.text_field :incorrect2, :class => "form-control" %>
+	<br>
+
+	Incorrect 3
+	<%= f.text_field :incorrect3, :class => "form-control" %>
+	<br>
+
+	Correct Answer Sentence
+	<%= f.text_field :correctAnswerSentence, :class => "form-control" %>
+	<br>
+
+	<%= f.submit "Save", :class => "btn btn-large btn-success" %>
+
+<% end %>

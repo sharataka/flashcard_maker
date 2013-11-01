@@ -1,10 +1,21 @@
 FlashcardMaker::Application.routes.draw do
   
-  root :to => 'deck#index'
+  root :to => 'questions#index'
 
   resources :decks do
     resources :flashcards
   end
+
+  resources :questions
+
+  namespace :api do
+    namespace :v1 do
+      resources :questions
+    end
+  end
+
+  match "/api/questions/:id"    => "questions#api"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

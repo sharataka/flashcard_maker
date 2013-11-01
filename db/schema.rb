@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131003001121) do
+ActiveRecord::Schema.define(:version => 20131031225754) do
 
   create_table "cards", :force => true do |t|
     t.text     "front"
@@ -35,5 +35,16 @@ ActiveRecord::Schema.define(:version => 20131003001121) do
   end
 
   add_index "flashcards", ["deck_id"], :name => "index_flashcards_on_deck_id"
+
+  create_table "questions", :force => true do |t|
+    t.string   "questions"
+    t.string   "correctAnswer"
+    t.string   "incorrect1"
+    t.string   "incorrect2"
+    t.string   "incorrect3"
+    t.text     "correctAnswerSentence"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+  end
 
 end

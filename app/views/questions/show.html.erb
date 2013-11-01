@@ -1,0 +1,23 @@
+<a href = "/questions">Back to all questions</a>
+<br><br>
+<strong>Question: <%= @question.questions %></strong>
+<br>
+<li>Correct Answer: <%= @question.correctAnswer %>
+<br>
+<li>Incorrect 1: <%= @question.incorrect1 %>
+<br>
+<li>Incorrect 2: <%= @question.incorrect2 %>
+<br>
+<li>Incorrect 3: <%= @question.incorrect3 %>
+<br>
+<li>Correct Answer in Sentence: <%= @question.correctAnswerSentence %>
+<br>
+<br>
+
+<%= link_to "Edit Question", edit_question_path(@question) %>
+<br><br>
+<%= link_to "Delete Project",
+     question_path(@question),
+     :method => :delete,
+     :confirm => "Are you sure you want to delete this question?" %>
+<br><br>

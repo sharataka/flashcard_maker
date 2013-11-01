@@ -1,0 +1,10 @@
+
+<% @questions.each do |question| %>
+
+<a href = "/questions/<%= question.id %>">
+<%= question.questions %> (question id = <%= question.id %>)
+</a>
+
+<br><br>
+
+<% end %>
