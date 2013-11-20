@@ -16,6 +16,10 @@ FlashcardMaker::Application.routes.draw do
 
   match "/api/questions/:id"    => "questions#api"
 
+  match "/quiz/question/:question_id"    => "questions#display_question"
+
+  match "/quiz/question/:question_id/:response"    => "questions#display_answer"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

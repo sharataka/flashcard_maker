@@ -51,4 +51,22 @@ class QuestionsController < ApplicationController
 			render :action => "edit"
 		end
 	end
+
+	def display_question
+		@question = Question.find(params[:question_id])
+	end
+
+	def display_answer
+		@question = Question.find(params[:question_id])
+		@user_answer = params[:response]
+		if @user_answer == @question.correctAnswer
+			@is_correct = 'true'
+		else
+			@is_correct = 'false'
+		end
+
+	end
+
+
+
 end
