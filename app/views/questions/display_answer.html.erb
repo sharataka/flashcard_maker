@@ -78,12 +78,14 @@
       <% end %>
 
       	<br/><br/>
-      <p><i>After hiking for two days, the climbers finally reached the summit of Mt. Rainier.</i></p>
+      <p><i><%= @question.correctAnswerSentence %></i></p>
 
 
       <a href = /quiz/question/<%= @question.id + 1%> class= "button btn btn-success btn-lg">
-          Next  <span class = "glyphicon glyphicon-arrow-right"></span></a>
+          Next </a>
           <br/><br/>
+
+
 
 
       2 words mastered.  Master 5 to earn a star.
