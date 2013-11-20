@@ -67,6 +67,9 @@ class QuestionsController < ApplicationController
 
 	end
 
+	def app_list
+		@question = Question.first
+	end
 
 
 end

@@ -1,6 +1,6 @@
 FlashcardMaker::Application.routes.draw do
   
-  root :to => 'questions#index'
+  root :to => 'questions#app_list'
 
   resources :decks do
     resources :flashcards
